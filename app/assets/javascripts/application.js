@@ -71,7 +71,7 @@ interact('.draggable')
 // enable draggables to be dropped into this
 interact('.dropzone').dropzone({
   // only accept elements matching this CSS selector
-  accept: '#yes-drop',
+  accept: '.duckie',
   // Require a 75% element overlap for a drop to be possible
   overlap: 0.75,
 
@@ -98,6 +98,7 @@ interact('.dropzone').dropzone({
   },
   ondrop: function (event) {
     //event.relatedTarget.textContent = 'Dropped';
+    return alert('You got it!')
   },
   ondropdeactivate: function (event) {
     // remove active dropzone feedback
